@@ -24,3 +24,23 @@ mistake in your source code, please explain how to improve your code.
 ### Areas for Improvement:
 1. Input Validation: I could improve the code by adding more robust input validation to ensure that user inputs are sanitized and validated before processing. This would help prevent potential security vulnerabilities such as SQL injection or cross-site scripting (XSS) attacks.
 2. Custom Exception Handling: Instead of using generic exceptions like RuntimeException, I could create custom exception classes to provide more specific error handling and improve code clarity.
+
+## Reflection 2
+> 1. After writing the unit test, how do you feel? How many unit tests should be made in a
+     class? How to make sure that our unit tests are enough to verify our program? It would be
+     good if you learned about code coverage. Code coverage is a metric that can help you
+     understand how much of your source is tested. If you have 100% code coverage, does
+     that mean your code has no bugs or errors?
+
+After writing the unit tests, I feel more confident about the reliability and correctness of my code. Writing unit tests allows me to verify that individual components of my application function as expected, which helps in identifying bugs early in the development process. The number of unit tests that should be made in a class depends on the complexity and functionality of that class. Ideally, I aim to cover all possible scenarios, including edge cases, to ensure comprehensive testing. To ensure that our unit tests are sufficient to verify our program, I focus on achieving high code coverage while also considering the quality of the tests. Code coverage is a useful metric that indicates the percentage of code that is executed during testing. However, having 100% code coverage does not necessarily mean that the code is free of bugs or errors. It is possible to have high coverage with poorly written tests that do not effectively validate the functionality of the code. Therefore, it is essential to write meaningful tests that not only cover the code but also assert the expected behavior and outcomes.
+
+> 2. Suppose that after writing the CreateProductFunctionalTest.java along with the
+     corresponding test case, you were asked to create another functional test suite that
+     verifies the number of items in the product list. You decided to create a new Java class
+     similar to the prior functional test suites with the same setup procedures and instance
+     variables.
+     What do you think about the cleanliness of the code of the new functional test suite? Will
+     the new code reduce the code quality? Identify the potential clean code issues, explain
+     the reasons, and suggest possible improvements to make the code cleaner!
+
+Creating a new functional test suite with similar setup procedures and instance variables can lead to code duplication, which is a potential clean code issue. Code duplication can reduce code quality as it makes the codebase harder to maintain and increases the risk of inconsistencies. If changes are needed in the setup procedures or instance variables, they would have to be made in multiple places, increasing the likelihood of errors. By extracting common setup procedures into a base class and adopting the Page Object Model, we can make the code cleaner, more modular, and easier to maintain.
